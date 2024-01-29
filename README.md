@@ -21,4 +21,7 @@ No se completo todo el ejercicio por solucion de errores que llegaron a pasar en
 
 ## Cambios
 
-Se cambion en la tabla MisionNinja la FechaFin a Null para que sirva perfecta
+- Se cambion en la tabla MisionNinja la FechaFin a Null para que sirva perfecto
+- Se cambiaron unos pocos inserts
+- Se agregaron clases nuevas en el diagrama de clases
+
