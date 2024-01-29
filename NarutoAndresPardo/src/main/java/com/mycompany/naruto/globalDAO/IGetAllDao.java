@@ -1,4 +1,4 @@
-package com.mycompany.naruto.model.DAO;
+package com.mycompany.naruto.globalDAO;
 
 import java.util.List;
 

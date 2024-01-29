@@ -1,4 +1,4 @@
-package com.mycompany.naruto.model.DAO;
+package com.mycompany.naruto.globalDAO;
 
 /**
  * This interface can be extended or implemented by other DAO interfaces or classes
