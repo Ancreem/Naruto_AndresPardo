@@ -1,11 +1,11 @@
 insert into Mision (ID, Descripcion, Rango, Recompensa) values
-(1, "Capturar un gato", "Genin", 10),
-(2, "Escoltar alguien importante", "Chouning", 70),
-(3, "Capturar a Sasuke", "Genin", 3000),
-(4, "Investigar en las aguas termales", "Genin", 10),
-(5, "Proteger a toda costa el hokage", "Chouning", 10000),
-(6, "Escoltar alguien importante", "Chouning", 1000),
-(7, "Capturar a madara", "Chouning", 10000);
+(1, "Capturar un gato", "A", 10),
+(2, "Escoltar alguien importante", "S", 70),
+(3, "Capturar a Sasuke", "S", 3000),
+(4, "Investigar en las aguas termales", "A", 10),
+(5, "Proteger a toda costa el hokage", "S", 10000),
+(6, "Escoltar alguien importante", "S", 1000),
+(7, "Capturar a madara", "S", 10000);
 
 
 insert into Ninja (ID, Nombre, Rango, Aldea) values
