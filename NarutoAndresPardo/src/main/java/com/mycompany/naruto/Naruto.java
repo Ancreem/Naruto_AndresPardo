@@ -1,14 +1,31 @@
 package com.mycompany.naruto;
 
 import com.mycompany.naruto.controllers.MisionNinjaController;
+import com.mycompany.naruto.model.classes.MisionNinja;
+
+import java.time.LocalDate;
 
 public class Naruto {
     public static void main(String[] args) {
-        MisionNinjaController misionNinjaController = new MisionNinjaController();
+////          MisionNinja Guardar
+//        MisionNinja misionNinja = new MisionNinja(9, 1, 1, LocalDate.of(2024,02,14),LocalDate.of(2024,02,16), "Completado");
+//        MisionNinjaController.saveMisions(misionNinja);
 
-        misionNinjaController.consultMisionsDisponibleNinja(1);
+////          ConsultasCompletado o Disponible
+//        System.out.println(MisionNinjaController.consultMisionsCompleteNinja(2));
+//        System.out.println(MisionNinjaController.consultMisionsDisponibleNinja(3));
+          
 
-        System.out.println( misionNinjaController.consultMisionsDisponibleNinja(1));
-        System.out.println( misionNinjaController.consultMisionsCompleteNinja(2));
+////          MisionNinja Actualizar
+//        MisionNinja misionNinja = new MisionNinja();
+//        misionNinja.setMisionNinjaId(3);
+//        MisionNinjaController.actualizarCompletadoId(misionNinja);
+//        MisionNinjaController.actualizarDisponibleId(misionNinja);
+
+
+
+
+          
+        
     }
 }

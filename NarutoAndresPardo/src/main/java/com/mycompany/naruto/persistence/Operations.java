@@ -8,10 +8,12 @@ public abstract class Operations {
     public static Statement stmt = null;
     public static ResultSet rs = null;
 
+
     public static Connection setConnection(Connection connection) {
         Operations.con = connection;
         return connection;
     }
+
 
     public static Connection getConnection() {
         return con;
@@ -27,11 +29,11 @@ public abstract class Operations {
         }
     }
 
-    public static ResultSet query_db(PreparedStatement statement) {
+    public static ResultSet consultar_BD(PreparedStatement sentencia) {
         try {
-            rs = statement.executeQuery();
+            rs = sentencia.executeQuery();
         } catch (SQLException | RuntimeException sqlex) {
-            System.out.println("Runtime Error: " + sqlex);
+            System.out.println("ERROR RUTINA: " + sqlex);
             return null;
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -40,12 +42,12 @@ public abstract class Operations {
         return rs;
     }
 
-    public static int insert_update_delete_db(PreparedStatement statement) {
+    public static int insertar_actualizar_borrar_BD(PreparedStatement sentencia){
         int filas;
         try {
-            filas = statement.executeUpdate();
+            filas = sentencia.executeUpdate();
         } catch (SQLException | RuntimeException sqlex) {
-            System.out.println("Error" + sqlex);
+            System.out.println("ERROR" + sqlex);
             return 0;
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -54,17 +56,17 @@ public abstract class Operations {
         return filas;
     }
 
-    public static boolean setAutoCommitBD(boolean param) {
+    public static boolean setAutoCommitBD(boolean parametro) {
         try {
-            con.setAutoCommit(param);
+            con.setAutoCommit(parametro);
         } catch (SQLException sqlex) {
-            System.out.println("Error configuration autocommit " + sqlex.getMessage());
+            System.out.println("Error al configurar el autoCommit " + sqlex.getMessage());
             return false;
         }
         return true;
     }
 
-    public static void closeConnection() {
+    public static void cerrarConexion() {
         closeConnection(con);
     }
 
@@ -73,7 +75,7 @@ public abstract class Operations {
             con.commit();
             return true;
         } catch (SQLException sqlex) {
-            System.out.println("Error in commit " + sqlex.getMessage());
+            System.out.println("Error al hacer commit " + sqlex.getMessage());
             return false;
         }
     }
@@ -83,8 +85,22 @@ public abstract class Operations {
             con.rollback();
             return true;
         } catch (SQLException sqlex) {
-            System.out.println("Error in rollback " + sqlex.getMessage());
+            System.out.println("Error al hacer rollback " + sqlex.getMessage());
             return false;
         }
+    }
+
+    public static int insert_update_delete_db(PreparedStatement ps) {
+        int filas;
+        try {
+            filas = ps.executeUpdate();
+        } catch (SQLException | RuntimeException sqlex) {
+            System.out.println("Error" + sqlex);
+            return 0;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return 0;
+        }
+        return filas;
     }
 }

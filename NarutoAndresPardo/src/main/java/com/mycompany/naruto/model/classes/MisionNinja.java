@@ -10,6 +10,21 @@ public class MisionNinja {
     private LocalDate fechaFin;
     private String estado;
 
+    public MisionNinja() {
+    }
+
+    public MisionNinja(String estado) {
+        this.estado = estado;
+    }
+
+    public MisionNinja(long misionNinjaId, long idMision, long idNinja, LocalDate fechaInicio, LocalDate fechaFin, String estado) {
+        this.misionNinjaId = misionNinjaId;
+        this.idMision = idMision;
+        this.idNinja = idNinja;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.estado = estado;
+    }
 
     public String getEstado() {
         return estado;
